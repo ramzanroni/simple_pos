@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 
 Route::get('/', function () {
@@ -24,6 +25,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit/employee/{id}', 'editEmployee')->name('edit.employee');
         Route::post('/update/employee', 'updateEmployee')->name('update.employee');
         Route::get('/delete/employee/{id}', 'deleteEmployee')->name('delete.employee');
+    });
+    
+    //Customer
+    Route::controller(CustomerController::class)->group(function(){
+        Route::get('/all/customer', 'allCustomer')->name('all.customer');
+        Route::get('/add/customer', 'addCustomer')->name('add.customer');
+        Route::post('/store/customer', 'storeCustomer')->name('store.customer');
     });
 });
 

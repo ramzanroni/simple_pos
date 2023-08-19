@@ -72,6 +72,23 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <a href="#customermanage" data-bs-toggle="collapse">
+                        <i class="mdi mdi-account-cowboy-hat"></i>
+                        <span> Customer Manage </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="customermanage">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('all.customer') }}">All Employee</a>
+                            </li> 
+                            <li>
+                                <a href="{{ route('add.customer') }}">Add Employee</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
                 <li>
                     <a href="#sidebarCrm" data-bs-toggle="collapse">
