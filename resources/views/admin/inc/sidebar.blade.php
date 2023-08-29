@@ -81,10 +81,10 @@
                     <div class="collapse" id="customermanage">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{ route('all.customer') }}">All Employee</a>
+                                <a href="{{ route('all.customer') }}">All Customer</a>
                             </li> 
                             <li>
-                                <a href="{{ route('add.customer') }}">Add Employee</a>
+                                <a href="{{ route('add.customer') }}">Add Customer</a>
                             </li>
                         </ul>
                     </div>

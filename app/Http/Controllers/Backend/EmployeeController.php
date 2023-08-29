@@ -49,8 +49,8 @@ class EmployeeController extends Controller
         );
         $image = $request->file('empImg');
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-        Image::make($image)->resize(300, 300)->save('upload/emp_image' . $name_gen);
-        $save_url = 'upload/emp_image' . $name_gen;
+        Image::make($image)->resize(300, 300)->save('upload/emp_image/' . $name_gen);
+        $save_url = 'upload/emp_image/' . $name_gen;
         Employee::insert(
             [
                 'name' => $request->name,
@@ -110,8 +110,8 @@ class EmployeeController extends Controller
             @unlink(public_path($findEmp->image));
             $image = $request->file('empImg');
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(300, 300)->save('upload/emp_image' . $name_gen);
-            $save_url = 'upload/emp_image' . $name_gen;
+            Image::make($image)->resize(300, 300)->save('upload/emp_image/' . $name_gen);
+            $save_url = 'upload/emp_image/' . $name_gen;
             $findEmp->image=$save_url;
         }
         $findEmp->name=$request->name;
