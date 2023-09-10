@@ -12,10 +12,10 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <a href="{{ route('add.customer') }}" class="btn btn-success">Add Customer</a>
+                            <a href="{{ route('add.supplier') }}" class="btn btn-success">Add Supplier</a>
                         </ol>
                     </div>
-                    <h4 class="page-title">Customer</h4>
+                    <h4 class="page-title">Supplier</h4>
                     
                 </div>
             </div>
@@ -26,7 +26,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Customer</h4>
+                        <h4 class="header-title">Supplier</h4>
 
                         <table id="key-datatable" class="table w-100">
                             <thead>
@@ -44,16 +44,17 @@
                                 @php
                                     $sl=1;
                                 @endphp
-                                @foreach ($customers as $key=> $customer)
+                                @foreach ($suppliers as $key=> $supplier)
                                     <tr>
                                         <td>{{ $key+1 }}</td>
-                                        <td>{{ $customer->name }}</td>
-                                        <td>{{ $customer->email }}</td>
-                                        <td>{{ $customer->phone }}</td>
-                                        <td><img src="{{ asset($customer->image) }}" style="width: 50px; height: 40px;" alt=""></td>
+                                        <td>{{ $supplier->name }}</td>
+                                        <td>{{ $supplier->email }}</td>
+                                        <td>{{ $supplier->phone }}</td>
+                                        <td><img src="{{ asset($supplier->image) }}" style="width: 50px; height: 40px;" alt=""></td>
                                         <td>
-                                            <a href="{{ route('edit.customer', $customer->id) }}" class="btn btn-info" title="Edit Customer"><i class="fa-solid fa-pen-to-square"></i></a>
-                                            <a href="{{ route('delete.customer', $customer->id) }}" title="Delete Customer" class="btn btn-danger btn-sm" id="delete"><i class="fa-solid fa-trash"></i></a>
+                                            <a href="{{ route('edit.supplier', $supplier->id) }}" title="Edit Supplier" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('delete.supplier', $supplier->id) }}" title="Delete Supplier" class="btn btn-danger btn-sm" id="delete"><i class="fa-solid fa-trash"></i></a>  
+                                            <a href="{{ route('details.supplier', $supplier->id) }}" title="Supplier Details" class="btn btn-success btn-sm"><i class="fa-solid fa-circle-info"></i></a>
                                         </td>
                                     </tr>
 

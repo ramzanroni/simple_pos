@@ -52,8 +52,8 @@
                                         <td>{{ $employee->phone }}</td>
                                         <td><img src="{{ asset($employee->image) }}" style="width: 50px; height: 40px;" alt=""></td>
                                         <td>
-                                            <a href="{{ route('edit.employee', $employee->id) }}" class="btn btn-info">Edit</a>
-                                            <a href="{{ route('delete.employee', $employee->id) }}" class="btn btn-danger" id="delete">Delete</a>
+                                            <a href="{{ route('edit.employee', $employee->id) }}" title="Edit Employee" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('delete.employee', $employee->id) }}" title="Delete Customer" class="btn btn-danger btn-sm" id="delete"><i class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
 

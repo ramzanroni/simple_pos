@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\RelationController;
+use App\Http\Controllers\Backend\SupplierController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,6 +41,16 @@ Route::middleware('auth')->group(function () {
         Route::post('/update/customer', 'updateCustomer')->name('update.customer');
     });
     
+    //supplier
+    Route::controller(SupplierController::class)->group(function(){
+        Route::get('/all/supplier', 'allSupplier')->name('all.supplier');
+        Route::get('/add/supplier', 'addSupplier')->name('add.supplier');
+        Route::post('/store/supplier', 'storeSupplier')->name('store.supplier');
+        Route::get('/delete/supplier/{id}', 'deleteSupplier')->name('delete.supplier');
+        Route::get('/edit/supplier/{id}', 'editSupplier')->name('edit.supplier');
+        Route::post('/update/supplier', 'updateSupplier')->name('update.supplier');
+        Route::get('/details/supplier/{id}', 'detailsSupplier')->name('details.supplier');
+    });
     //relations 
     Route::controller(RelationController::class)->group(function(){
         Route::get('/one_to_one_relation', 'getRelation')->name('relation');

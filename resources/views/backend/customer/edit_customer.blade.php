@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="shopname" class="form-label">Account Holder</label>
+                                        <label for="shopname" class="form-label">Shopname</label>
                                         <input type="text" name="shopname" value="{{ $customerData->shopname }}" class="form-control @error('shopname') is-invalid @enderror" id="shopname"
                                             placeholder="Enter Shopname">
                                         @error('shopname')

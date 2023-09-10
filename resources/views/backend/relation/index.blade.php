@@ -27,30 +27,6 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">Employees</h4>
-
-                        {{-- <table id="key-datatable" class="table dt-responsive nowrap w-100">
-                            <thead>
-                                <tr>
-                                    <th>Sl</th>
-                                    <th>Name</th>
-                                    <th>Phone</th>
-                                </tr>
-                            </thead>
-                        
-                            <tbody>
-                                @php
-                                    $sl=0;
-
-                                @endphp
-                                @foreach ($user as $data)
-                                    <tr>
-                                        <td>{{ ++$sl }}</td>
-                                        <td>{{ $data->name }}</td>
-                                        <td>{{ $data->phoneTbl->name }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table> --}}
                         <table id="key-datatable" class="table dt-responsive nowrap w-100">
                             <thead>
                                 <tr>
@@ -63,7 +39,6 @@
                             <tbody>
                                 @php
                                     $sl=0;
-
                                 @endphp
                                 @foreach ($post as $data)
                                     <tr>

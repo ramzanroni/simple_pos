@@ -89,6 +89,23 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <a href="#suppliermanage" data-bs-toggle="collapse">
+                        <i class="mdi mdi-account-cowboy-hat"></i>
+                        <span> Customer Manage </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="suppliermanage">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('all.supplier') }}">All Supplier</a>
+                            </li> 
+                            <li>
+                                <a href="{{ route('add.customer') }}">Add Customer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
                 <li>
                     <a href="#sidebarCrm" data-bs-toggle="collapse">
