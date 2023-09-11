@@ -33,7 +33,7 @@ class EmployeeController extends Controller
                 'salary' => 'required',
                 'vacation' => 'required',
                 'city' => 'required',
-                'empImg' => 'required|jpg|png|jpeg',
+                'empImg' => 'required',
             ],
             [
                 'name.required' => 'Employee name must needed',

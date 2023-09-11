@@ -92,7 +92,7 @@
                 <li>
                     <a href="#suppliermanage" data-bs-toggle="collapse">
                         <i class="mdi mdi-account-cowboy-hat"></i>
-                        <span> Customer Manage </span>
+                        <span> Supplier Manage </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="suppliermanage">
@@ -101,7 +101,24 @@
                                 <a href="{{ route('all.supplier') }}">All Supplier</a>
                             </li> 
                             <li>
-                                <a href="{{ route('add.customer') }}">Add Customer</a>
+                                <a href="{{ route('add.supplier') }}">Add Supplier</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#salaryManage" data-bs-toggle="collapse">
+                        <i class="mdi mdi-account-cowboy-hat"></i>
+                        <span> Salary Manage </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="salaryManage">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('advance.salary') }}">Add Advance Salary</a>
+                            </li> 
+                            <li>
+                                <a href="{{ route('all.advance.salary') }}">All Advance Salary</a>
                             </li>
                         </ul>
                     </div>

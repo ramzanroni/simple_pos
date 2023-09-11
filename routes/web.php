@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\RelationController;
+use App\Http\Controllers\Backend\SalaryController;
 use App\Http\Controllers\Backend\SupplierController;
 
 Route::get('/', function () {
@@ -50,6 +51,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit/supplier/{id}', 'editSupplier')->name('edit.supplier');
         Route::post('/update/supplier', 'updateSupplier')->name('update.supplier');
         Route::get('/details/supplier/{id}', 'detailsSupplier')->name('details.supplier');
+    });
+
+    //advance salary
+    Route::controller(SalaryController::class)->group(function(){
+        Route::get('/add/advance/salary', 'advanceSalary')->name('advance.salary');
+        Route::post('/store/advance/salary', 'storeAdvanceSalary')->name('store.advance.salary');
+        Route::get('/all/advance/salary', 'allAdvanceSalary')->name('all.advance.salary');
     });
     //relations 
     Route::controller(RelationController::class)->group(function(){
