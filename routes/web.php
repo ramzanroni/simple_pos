@@ -58,11 +58,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/add/advance/salary', 'advanceSalary')->name('advance.salary');
         Route::post('/store/advance/salary', 'storeAdvanceSalary')->name('store.advance.salary');
         Route::get('/all/advance/salary', 'allAdvanceSalary')->name('all.advance.salary');
+        Route::get('/edit/advance/salary/{id}', 'editAdvanceSalary')->name('edit.advance.salary');
+        Route::post('/update/advance/salary', 'updateSalary')->name('update.advance.salary');
+        Route::get('/pay/salary', 'paySalary')->name('pay.salary');
+        Route::get('/pay/now/salary/{id}', 'payNowSalary')->name('pay.now.salary');
     });
     //relations 
     Route::controller(RelationController::class)->group(function(){
         Route::get('/one_to_one_relation', 'getRelation')->name('relation');
-
+        
     });
 });
 

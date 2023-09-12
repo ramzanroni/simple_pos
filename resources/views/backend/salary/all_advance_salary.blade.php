@@ -54,8 +54,16 @@
                                         <td>{{ $advance_salary_data->month }}</td>
                                         <td>{{ $advance_salary_data->year }}</td>
                                         <td>{{ $advance_salary_data->employee->salary }}</td>
-                                        <td>{{ $advance_salary_data->advance_salary }}</td>
                                         <td>
+                                            @if ($advance_salary_data->advance_salary==NULL)
+                                                <p>No Advance</p>
+                                            @else
+                                                {{ $advance_salary_data->advance_salary }}
+                                            @endif                                        
+                                         </td>
+                                        <td>
+                                            <a href="{{ route('edit.advance.salary', $advance_salary_data->id) }}" title="Edit Advance Salary" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('delete.supplier', $advance_salary_data->id) }}" title="Delete Supplier" class="btn btn-danger btn-sm" id="delete"><i class="fa-solid fa-trash"></i></a>  
                                         </td>
                                     </tr>
 
