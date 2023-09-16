@@ -62,6 +62,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/update/advance/salary', 'updateSalary')->name('update.advance.salary');
         Route::get('/pay/salary', 'paySalary')->name('pay.salary');
         Route::get('/pay/now/salary/{id}', 'payNowSalary')->name('pay.now.salary');
+        Route::post('/store/employee/salary', 'storeEmployeeSalary')->name('store.employee.salary');
+        Route::get('/employee/month/salary', 'monthlySalary')->name('emp.month.salary');
+        Route::get('/history/salary/{id}', 'salaryHistory')->name('pay.history.salary');
     });
     //relations 
     Route::controller(RelationController::class)->group(function(){

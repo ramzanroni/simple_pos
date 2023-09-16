@@ -123,6 +123,9 @@
                             <li>
                                 <a href="{{ route('pay.salary') }}">Pay Salary</a>
                             </li>
+                            <li>
+                                <a href="{{ route('emp.month.salary') }}">Monthly Salary</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
