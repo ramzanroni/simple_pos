@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\AttendenceController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\RelationController;
@@ -66,6 +67,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/employee/month/salary', 'monthlySalary')->name('emp.month.salary');
         Route::get('/history/salary/{id}', 'salaryHistory')->name('pay.history.salary');
     });
+    //Employee Attendance
+    Route::controller(AttendenceController::class)->group(function(){
+        Route::get('/employee/attendance/list', 'employeeAttendanceList')->name('employee.attendance.list');
+        Route::get('/add/employee/attendance', 'addEmployeeAttendance')->name('add.emplpyee.attendance');
+    });
+
     //relations 
     Route::controller(RelationController::class)->group(function(){
         Route::get('/one_to_one_relation', 'getRelation')->name('relation');

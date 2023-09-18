@@ -129,6 +129,23 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <a href="#employeeAttendance" data-bs-toggle="collapse">
+                        <i class="mdi mdi-account-cowboy-hat"></i>
+                        <span> Attendance Manage </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="employeeAttendance">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('employee.attendance.list') }}">Employee Attendance List</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('add.emplpyee.attendance') }}">Add Employee Attendance</a>
+                            </li> 
+                        </ul>
+                    </div>
+                </li>
 
                 <li>
                     <a href="#sidebarCrm" data-bs-toggle="collapse">
